@@ -1,0 +1,7 @@
+C:\Users\Leonid.Ristanovski\source\repos\DifferentBasic\DifferentBasic\bin\Debug\DifferentBasic.exe.config
+C:\Users\Leonid.Ristanovski\source\repos\DifferentBasic\DifferentBasic\bin\Debug\DifferentBasic.exe
+C:\Users\Leonid.Ristanovski\source\repos\DifferentBasic\DifferentBasic\bin\Debug\DifferentBasic.pdb
+C:\Users\Leonid.Ristanovski\source\repos\DifferentBasic\DifferentBasic\obj\Debug\DifferentBasic.csproj.CoreCompileInputs.cache
+C:\Users\Leonid.Ristanovski\source\repos\DifferentBasic\DifferentBasic\obj\Debug\DifferentBasic.exe
+C:\Users\Leonid.Ristanovski\source\repos\DifferentBasic\DifferentBasic\obj\Debug\DifferentBasic.pdb
+C:\Users\Leonid.Ristanovski\source\repos\DifferentBasic\DifferentBasic\obj\Debug\DifferentBasic.csproj.AssemblyReference.cache
