@@ -26,11 +26,15 @@ namespace DifferentBasic
                         for(int k = 1; k <= 10; k++)
                         {
                             FileStream subFile = File.Create(folder + counter + "\\" + j + "\\" + k + extensions[random.Next(extensions.Length)]);
-                        }
+                            subFile.Close();
+                        }                        
                     }
                 }
                 counter++;
             }
+
+            
+
             return path;
         }    
     }

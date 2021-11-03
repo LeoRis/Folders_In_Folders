@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 
 namespace DifferentBasic
 {
-
     class Program
     {
         static void Main()
@@ -14,7 +13,9 @@ namespace DifferentBasic
             var longerPath = @"C:\Homework\";
 
             Folders.CreateFolders(path);
-            RemoveFileWithExtensionTakenFromInput.RemoveMethod(longerPath);
+            //RemoveFileWithExtensionTakenFromInput.RemoveMethod(longerPath);
+
+            EvenDocumentChangeName.Changer(longerPath);
 
         }
     }
