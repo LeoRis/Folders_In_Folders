@@ -15,7 +15,7 @@ namespace DifferentBasic
 
             int counter = 1;
 
-            while (counter <= 3)
+            while (counter <= 10)
             {
                 if (!Directory.Exists(folder))
                 {

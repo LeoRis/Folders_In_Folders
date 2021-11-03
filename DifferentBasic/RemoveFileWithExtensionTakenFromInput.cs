@@ -18,14 +18,7 @@ namespace DifferentBasic
             {
                 if (files[i].Contains(extensionToBeRemoved))
                 {
-                    try
-                    {
-
-                    }
-                    finally
-                    { 
-                        File.Delete(files[i]);
-                    }
+                    File.Delete(files[i]);
                 }
             }
 
