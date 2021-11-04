@@ -8,6 +8,9 @@ namespace DifferentBasic
     {
         public static void Changer(string path)
         {
+            //Console.WriteLine("Please type extension for change:");
+            //extension = Console.ReadLine();            
+
             string folder = Path.GetDirectoryName(path);
             var files = Directory.GetFiles(folder, "*.*", SearchOption.AllDirectories);
             List<FileInfo> sourceFiles = new List<FileInfo>();
@@ -23,7 +26,7 @@ namespace DifferentBasic
             {
                 if(i % 2 == 0)
                 {
-                    File.Move(files[i], files[i] + "change");
+                    File.Move(files[i], files[i] + "different");
                 }
             }
         }

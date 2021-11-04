@@ -3,9 +3,10 @@ using System.IO;
 
 namespace DifferentBasic
 {
-    public class RemoveFileWithExtensionTakenFromInput
+    public class Helper
     {
-        public static void RemoveMethod(string path)
+        #region FilesAndFolders
+        public static void RemoveFilesWithExtension(string path)
         {
             String folder = Path.GetDirectoryName(path);
 
@@ -24,5 +25,6 @@ namespace DifferentBasic
 
             Console.WriteLine("Files removed.");
         }
+        #endregion
     }
 }

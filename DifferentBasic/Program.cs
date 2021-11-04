@@ -12,8 +12,9 @@ namespace DifferentBasic
             var path = @"C:\Homework\basic\";
             var longerPath = @"C:\Homework\";
 
-            Folders.CreateFolders(path);
-            RemoveFileWithExtensionTakenFromInput.RemoveMethod(longerPath);
+            //Folders.CreateFolders(path);
+
+            UserInput.RemoveFilesWithExtension(longerPath);
 
             //EvenDocumentChangeName.Changer(longerPath);
 

@@ -31,9 +31,7 @@ namespace DifferentBasic
                     }
                 }
                 counter++;
-            }
-
-            
+            }            
 
             return path;
         }    
