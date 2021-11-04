@@ -10,15 +10,6 @@ namespace DifferentBasic
         {
             String folder = Path.GetDirectoryName(folderPath);
 
-            if (Directory.Exists(folderPath))
-            {
-                Console.WriteLine("Directory exists.");
-            }
-            else
-            {
-                Console.WriteLine("Directory doesn't exist.");
-            }
-
 
 
             //var files = Directory.GetFiles(folder, "*.*", SearchOption.AllDirectories);
@@ -36,22 +27,47 @@ namespace DifferentBasic
 
         public static bool CheckIfPathIsFile(string filePath)
         {
+            bool result = false;
             FileAttributes attr = File.GetAttributes(filePath);
 
             //detect whether its a directory or file
             if ((attr & FileAttributes.Directory) == FileAttributes.Directory)
             {
                 Console.WriteLine("It's a directory");
+                result = false;
             }
             else
             {
                 Console.WriteLine("It's a file");
-                return true;
+                result = true;
             }
-            return false;
+            return result;
         }
 
-        //public static void BackupMethod()
+        public static void BackupFolder(string sourcePath, string targetPath)
+        {
+            var listDirectories = Directory.GetDirectories(sourcePath, "*", SearchOption.AllDirectories);
+            var listFiles = Directory.GetFiles(sourcePath, "*.*", SearchOption.AllDirectories);
+
+            if (Directory.Exists(sourcePath))
+            {
+                //Now Create all of the directories
+                foreach (string dirPath in listDirectories)
+                {
+                    Directory.CreateDirectory(dirPath.Replace(sourcePath, targetPath));
+                }
+
+                //Copy all the files & Replaces any files with the same name
+                foreach (string newPath in listFiles)
+                {
+                    File.Copy(newPath, newPath.Replace(sourcePath, targetPath), true);
+                }
+            }
+            else
+            {
+                Console.WriteLine("Wrong path.");
+            }
+        }
 
         #endregion
 

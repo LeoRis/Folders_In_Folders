@@ -14,10 +14,15 @@ namespace DifferentBasic
             var path = @"C:\Homework\basic\";
             var longerPath = @"C:\Homework\";
             var filePath = @"C:\Homework\basic1\1\1.pdf";
+            var sourceFolder = @"C:\Homework\basic1";
+            var destinationFolder = @"C:\tmp\";
+
 
             // TODO while()
 
-            if (Helper.CheckIfPathIsFile(longerPath))
+            Helper.BackupFolder(sourceFolder, destinationFolder);
+
+            /*if (Helper.CheckIfPathIsFile(longerPath))
             {
                 if (Directory.Exists(longerPath))
                 {
@@ -31,7 +36,7 @@ namespace DifferentBasic
             else
             {
                 Console.WriteLine("Please enter folder path.");
-            }
+            }*/
 
 
 
