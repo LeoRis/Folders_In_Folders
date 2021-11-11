@@ -12,17 +12,9 @@ namespace DifferentBasic
             //extension = Console.ReadLine();            
 
             string folder = Path.GetDirectoryName(path);
-            var files = Directory.GetFiles(folder, "*.*", SearchOption.AllDirectories);
-            List<FileInfo> sourceFiles = new List<FileInfo>();
+            string[] files = Directory.GetFiles(folder, "*.*", SearchOption.AllDirectories);
 
-            foreach(var file in files)
-            {
-                sourceFiles.Add(new FileInfo(file));
-            }
-
-            sourceFiles.ToArray();
-
-            for(int i = 0; i < sourceFiles.Count; i++)
+            for(int i = 0; i < files.Length; i++)
             {
                 if(i % 2 == 0)
                 {

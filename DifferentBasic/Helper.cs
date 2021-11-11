@@ -10,19 +10,17 @@ namespace DifferentBasic
         {
             String folder = Path.GetDirectoryName(folderPath);
 
+            var files = Directory.GetFiles(folder, "*.*", SearchOption.AllDirectories);
 
+            for (int i = 0; i < files.Length; i++)
+            {
+                if (files[i].Contains(fileExtension))
+                {
+                    File.Delete(files[i]);
+                }
+            }
 
-            //var files = Directory.GetFiles(folder, "*.*", SearchOption.AllDirectories);
-
-            //for(int i = 0; i < files.Length; i++)
-            //{
-            //    if (files[i].Contains(fileExtension))
-            //    {
-            //        File.Delete(files[i]);
-            //    }
-            //}
-
-            //Console.WriteLine("Files removed.");
+            Console.WriteLine("Files removed.");
         }
 
         public static bool CheckIfPathIsFile(string filePath)
@@ -44,8 +42,11 @@ namespace DifferentBasic
             return result;
         }
 
-        public static void BackupFolder(string sourcePath, string targetPath)
+        public static void BackupFolder(string sourcePath, string targetPath, int location)
         {
+            // 1 (location) for local computer
+            // 2 (location) for remote computer
+
             var listDirectories = Directory.GetDirectories(sourcePath, "*", SearchOption.AllDirectories);
             var listFiles = Directory.GetFiles(sourcePath, "*.*", SearchOption.AllDirectories);
 

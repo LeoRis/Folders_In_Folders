@@ -16,11 +16,11 @@ namespace DifferentBasic
             var filePath = @"C:\Homework\basic1\1\1.pdf";
             var sourceFolder = @"C:\Homework\basic1";
             var destinationFolder = @"C:\tmp\";
-
+            int location = 1;
 
             // TODO while()
 
-            Helper.BackupFolder(sourceFolder, destinationFolder);
+            //Helper.BackupFolder(sourceFolder, destinationFolder, location);
 
             /*if (Helper.CheckIfPathIsFile(longerPath))
             {
@@ -40,7 +40,7 @@ namespace DifferentBasic
 
 
 
-            //Folders.CreateFolders(path);
+            Folders.CreateFolders(path);
 
 
             //Console.WriteLine("Please insert the type of extension that you wish to delete: ");
@@ -49,7 +49,7 @@ namespace DifferentBasic
 
             //Helper.RemoveFilesWithExtension(filePath, extension);
 
-            //EvenDocumentChangeName.Changer(longerPath);
+            EvenDocumentChangeName.Changer(longerPath);
 
         }
     }
