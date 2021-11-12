@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Net;
 
 namespace DifferentBasic
 {
@@ -47,6 +48,8 @@ namespace DifferentBasic
             // 1 (location) for local computer
             // 2 (location) for remote computer
 
+            // C# code for FTP TODO
+
             var listDirectories = Directory.GetDirectories(sourcePath, "*", SearchOption.AllDirectories);
             var listFiles = Directory.GetFiles(sourcePath, "*.*", SearchOption.AllDirectories);
 
@@ -73,7 +76,40 @@ namespace DifferentBasic
         #endregion
 
         #region Numbers
+        public static Int32 TryParseInt(string value)
+        {
+            int number;
 
+            bool result = Int32.TryParse(value, out number);
+
+            if (result)
+            {
+                return number;
+            }
+            else
+            {
+                // If value is invalid, return -1.
+                return -1;
+            }
+        }
+
+
+        /*public static bool CheckValidDecimal(string number)
+        {
+
+            NumberStyles style = NumberStyles.AllowDecimalPoint | NumberStyles.Number;
+            CultureInfo culture = CultureInfo.CreateSpecificCulture("en-GB");
+            decimal result;
+
+            if (Decimal.TryParse(number, style, culture, out result))
+            {
+                return true;
+            }
+            else
+                return false;
+
+
+        }*/
 
 
         #endregion

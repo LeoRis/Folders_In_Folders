@@ -11,12 +11,38 @@ namespace DifferentBasic
     {
         static void Main()
         {
-            var path = @"C:\Homework\basic\";
-            var longerPath = @"C:\Homework\";
-            var filePath = @"C:\Homework\basic1\1\1.pdf";
-            var sourceFolder = @"C:\Homework\basic1";
-            var destinationFolder = @"C:\tmp\";
-            int location = 1;
+
+            //FTP testFTP = new FTP();
+            //var host = testFTP.host = "82.214.114.2:21";
+            //testFTP.UserId = "bojan_academy";
+            //testFTP.Password = "qjeK7#88";
+
+            //testFTP.CreateFolder(host);
+
+            BuildEmail newEmailForBojan = new BuildEmail();
+
+            BuildEmail.To = "ivanovbojan@gmail.com";
+            BuildEmail.CC = "leonid.ristanovski@gmail.com";
+            BuildEmail.BCC = "daniel@mltinvestment.com";
+            BuildEmail.Body = "Hello World!";
+            BuildEmail.Subject = "Test Email Via C#";
+
+            if (BuildEmail.SendMailCustomBody())
+            {
+                Console.WriteLine("I need to study a LOT!");
+            }
+            else
+            {
+                Console.WriteLine("You suck!");
+            }
+
+
+            //var path = @"C:\Homework\basic\";
+            //var longerPath = @"C:\Homework\";
+            //var filePath = @"C:\Homework\basic1\1\1.pdf";
+            //var sourceFolder = @"C:\Homework\basic1";
+            //var destinationFolder = @"C:\tmp\";
+            //int location = 1;
 
             // TODO while()
 
@@ -40,7 +66,7 @@ namespace DifferentBasic
 
 
 
-            Folders.CreateFolders(path);
+            //Folders.CreateFolders(path);
 
 
             //Console.WriteLine("Please insert the type of extension that you wish to delete: ");
@@ -49,7 +75,7 @@ namespace DifferentBasic
 
             //Helper.RemoveFilesWithExtension(filePath, extension);
 
-            EvenDocumentChangeName.Changer(longerPath);
+            //EvenDocumentChangeName.Changer(longerPath);
 
         }
     }
