@@ -1,6 +1,8 @@
 ﻿using System;
 using System.IO;
 using System.Net;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace DifferentBasic
 {
@@ -113,5 +115,6 @@ namespace DifferentBasic
 
 
         #endregion
+
     }
 }
