@@ -13,12 +13,11 @@ namespace DifferentBasic
     {
         #region Serialize / Deserialize
 
-        public static string CreateXML(Object YourClassObject)
+        public static string SerializeIntoXML(Object YourClassObject)
         {
-            XmlDocument xmlDoc = new XmlDocument();   //Represents an XML document, 
-            // Initializes a new instance of the XmlDocument class.          
+            XmlDocument xmlDoc = new XmlDocument();         
             XmlSerializer xmlSerializer = new XmlSerializer(YourClassObject.GetType());
-            // Creates a stream whose backing store is memory. 
+
             using (TextWriter xmlStream = new StreamWriter(@"C:\tmp\Basic.xml"))
             {
                 xmlSerializer.Serialize(xmlStream, YourClassObject);
@@ -26,7 +25,7 @@ namespace DifferentBasic
             }
         }
 
-        public static Object CreateObject(string XMLString, Object YourClassObject)
+        public static Object DeserializeIntoXML(string XMLString, Object YourClassObject)
         {
             XmlSerializer oXmlSerializer = new XmlSerializer(YourClassObject.GetType());
             //The StringReader will be the stream holder for the existing XML file 

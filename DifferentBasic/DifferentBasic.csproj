@@ -46,6 +46,8 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,15 +56,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntityFrameworkConfigs\AspNetRole.cs" />
+    <Compile Include="EntityFrameworkConfigs\AspNetUser.cs" />
+    <Compile Include="EntityFrameworkConfigs\AspNetUserClaim.cs" />
+    <Compile Include="EntityFrameworkConfigs\AspNetUserLogin.cs" />
+    <Compile Include="EntityFrameworkConfigs\Attachment.cs" />
+    <Compile Include="EntityFrameworkConfigs\AttachmentType.cs" />
     <Compile Include="BuildEmail.cs" />
+    <Compile Include="EntityFrameworkConfigs\CompanyContact.cs" />
+    <Compile Include="EntityFrameworkConfigs\CompanyContactType.cs" />
+    <Compile Include="EntityFrameworkConfigs\CompanyEmail.cs" />
+    <Compile Include="EntityFrameworkConfigs\Contact.cs" />
+    <Compile Include="EntityFrameworkConfigs\Content.cs" />
+    <Compile Include="EntityFrameworkConfigs\ContentDkzjn.cs" />
+    <Compile Include="ContentDTO.cs" />
+    <Compile Include="EntityFrameworkConfigs\ContentType.cs" />
+    <Compile Include="EntityFrameworkConfigs\ControlType.cs" />
+    <Compile Include="Dkzjn.cs" />
+    <Compile Include="EntityFrameworkConfigs\EmailType.cs" />
     <Compile Include="EvenDocumentChangeName.cs" />
     <Compile Include="Folders.cs" />
     <Compile Include="FTP.cs" />
+    <Compile Include="EntityFrameworkConfigs\Language.cs" />
+    <Compile Include="EntityFrameworkConfigs\Menu.cs" />
+    <Compile Include="HomeworkMenu.cs" />
+    <Compile Include="Migrations\202111131216259_InitialMigration.cs" />
+    <Compile Include="Migrations\202111131216259_InitialMigration.designer.cs">
+      <DependentUpon>202111131216259_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="Seasons.cs" />
     <Compile Include="SerializeHelper.cs" />
+    <Compile Include="EntityFrameworkConfigs\Slider.cs" />
+    <Compile Include="EntityFrameworkConfigs\Subscriber.cs" />
+    <Compile Include="EntityFrameworkConfigs\sysdiagram.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -70,6 +100,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202111131216259_InitialMigration.resx">
+      <DependentUpon>202111131216259_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

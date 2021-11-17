@@ -31,7 +31,7 @@ namespace DifferentBasic
         public virtual DbSet<Menu> Menus { get; set; }
         public virtual DbSet<Slider> Sliders { get; set; }
         public virtual DbSet<Subscriber> Subscribers { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<sysdiagram> Sysdiagrams { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -152,13 +152,13 @@ namespace DifferentBasic
                 .IsFixedLength()
                 .IsUnicode(false);
 
-            modelBuilder.Entity<ContentDkzjn>()
-                .HasOptional(e => e.ContentDkzjn1)
-                .WithRequired(e => e.ContentDkzjn2);
+            //modelBuilder.Entity<ContentDkzjn>()
+            //    .HasOptional(e => e.ContentDkzjn1)
+            //    .WithRequired(e => e.ContentDkzjn2);
 
-            modelBuilder.Entity<ContentDkzjn>()
-                .HasOptional(e => e.ContentDkzjn11)
-                .WithRequired(e => e.ContentDkzjn3);
+            //modelBuilder.Entity<ContentDkzjn>()
+            //    .HasOptional(e => e.ContentDkzjn11)
+            //    .WithRequired(e => e.ContentDkzjn3);
 
             modelBuilder.Entity<Language>()
                 .Property(e => e.Code)
