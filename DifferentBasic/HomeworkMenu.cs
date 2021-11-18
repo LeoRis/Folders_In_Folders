@@ -58,26 +58,36 @@ namespace DifferentBasic
                         }
                         else if(emailSubmenu == "n")
                         {
+                        comeBackhere:
                             Console.WriteLine("Would you like to amend the email? Y/N");
                             emailAmend = Console.ReadLine().ToLower();
                             if(emailAmend == "y")
                             {
                                 Console.WriteLine("Would you like to change the subject of the message, or the body?\nPress \"S\" for subject, or \"B\" for body.");
-                                if (Console.ReadLine().ToLower() == "s")
+                                string emailChanger = Console.ReadLine().ToLower();
+                                if (emailChanger == "s")
                                 {
                                     Console.WriteLine("Please add the new subject:");
                                     emailSubject = Console.ReadLine();
                                     BuildEmail.Subject = emailSubject;
+                                    BuildEmail.SendMailCustomBody();
+                                    Console.WriteLine("Message sent.");
                                 }
-                                else if (Console.ReadLine().ToLower() == "b")
+                                else if (emailChanger == "b")
                                 {
                                     Console.WriteLine("Please add the new body:");
                                     emailBody = Console.ReadLine();
                                     BuildEmail.Body = emailBody;
+                                    BuildEmail.SendMailCustomBody();
+                                    Console.WriteLine("Message sent.");
                                 }
                                 else
                                 {
-                                    Console.WriteLine("Wrong selection - please try again.");
+                                    while (!(emailChanger == "s" || emailChanger == "b"))
+                                    {
+                                        Console.WriteLine("Wrong selection - please try again.");
+                                        goto comeBackhere;
+                                    }
                                 }
                             }
                             else if(emailAmend == "n")
