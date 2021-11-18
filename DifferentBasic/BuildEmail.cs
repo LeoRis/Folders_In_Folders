@@ -74,6 +74,8 @@ namespace DifferentBasic
             set { _attachment = value; }
         }
 
+        public static int MyProperty { get; set; }
+
         #endregion
 
         #region Methods
