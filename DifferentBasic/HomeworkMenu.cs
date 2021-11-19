@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net.Mail;
 
 namespace DifferentBasic
@@ -13,10 +14,15 @@ namespace DifferentBasic
         public string EmailBody { get; set; }
         public string EmailAmend { get; set; }
         public string FtpPath { get; set; }
+        public string FtpHost { get; set; }
+        public int FtpPort { get; set; }
+        public string FtpUserId { get; set; }
+        public string FtpPassword { get; set; }
 
         public static void CreateMenu()
         {
             HomeworkMenu menu = new HomeworkMenu();
+            FTP ftp = new FTP();
 
             Console.WriteLine("Hello and welcome to our console application.\n");
             
@@ -120,9 +126,16 @@ namespace DifferentBasic
                 else if(menu.InitialSelector == "2")
                 {
                     Console.WriteLine("Please provide a path for your local file:");
-                    menu.FtpPath = Console.ReadLine();
+                    var tempPath = Console.ReadLine();
+                    menu.FtpPath = Path.GetDirectoryName(tempPath);
                     Console.WriteLine("Please enter host:");
-
+                    menu.FtpHost = Console.ReadLine();
+                    Console.WriteLine("Please enter port:");
+                    menu.FtpPort = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Please enter user Id:");
+                    menu.FtpUserId = Console.ReadLine();
+                    Console.WriteLine("Please enter password:");
+                    menu.FtpPassword = Console.ReadLine();
                 }
                 else if(menu.InitialSelector == "3")
                 {
