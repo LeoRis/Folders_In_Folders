@@ -10,9 +10,6 @@ namespace DifferentBasic
 
     public class FTP
     {
-
-        public int MyProperty { get; set; }
-
         //string host = "82.214.114.2:21";
         public string UserId = "bojan_academy";
         public string Password = "qjeK7#88";
