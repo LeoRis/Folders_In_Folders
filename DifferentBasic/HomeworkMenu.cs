@@ -61,11 +61,11 @@ namespace DifferentBasic
                         }
                         else if(menu.EmailSubmenu == "n")
                         {
-                        comeBackHere:
+                        comeBackHere: 
                             Console.WriteLine("Would you like to amend the email? Y/N");
                             menu.EmailAmend = Console.ReadLine().ToLower();
                             if(menu.EmailAmend == "y")
-                            {
+                            {                            
                                 Console.WriteLine("Would you like to change the subject of the message, or the body?\nPress \"S\" for subject, or \"B\" for body.");
                                 string emailChanger = Console.ReadLine().ToLower();
                                 if (emailChanger == "s")
