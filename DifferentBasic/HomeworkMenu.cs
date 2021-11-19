@@ -22,6 +22,7 @@ namespace DifferentBasic
             
             do
             {
+                Quit:
                 Console.WriteLine("Please select one of the following options:\n 1. Send email\n 2. Create FTP backup.\n 3. Quit");
                 initialSelector = Console.ReadLine();
                 if (initialSelector == "1")
@@ -49,6 +50,7 @@ namespace DifferentBasic
                         Console.WriteLine("Please enter the body of the message: ");
                         emailBody = Console.ReadLine();
                         BuildEmail.Body = emailBody;
+                    comeBackAgain:
                         Console.WriteLine("Would you like to send the email? Y/N");
                         emailSubmenu = Console.ReadLine().ToLower();
                         if(emailSubmenu == "y")
@@ -58,7 +60,7 @@ namespace DifferentBasic
                         }
                         else if(emailSubmenu == "n")
                         {
-                        comeBackhere:
+                        comeBackHere:
                             Console.WriteLine("Would you like to amend the email? Y/N");
                             emailAmend = Console.ReadLine().ToLower();
                             if(emailAmend == "y")
@@ -72,6 +74,7 @@ namespace DifferentBasic
                                     BuildEmail.Subject = emailSubject;
                                     BuildEmail.SendMailCustomBody();
                                     Console.WriteLine("Message sent.");
+                                    break;
                                 }
                                 else if (emailChanger == "b")
                                 {
@@ -80,20 +83,35 @@ namespace DifferentBasic
                                     BuildEmail.Body = emailBody;
                                     BuildEmail.SendMailCustomBody();
                                     Console.WriteLine("Message sent.");
+                                    break;
                                 }
                                 else
                                 {
-                                    while (!(emailChanger == "s" || emailChanger == "b"))
+                                    while (emailChanger != "s" || emailChanger != "b")
                                     {
                                         Console.WriteLine("Wrong selection - please try again.");
-                                        goto comeBackhere;
+                                        goto comeBackHere;
                                     }
                                 }
                             }
                             else if(emailAmend == "n")
                             {
-
+                                goto Quit;
                             }
+                            else
+                            {
+                                while (emailAmend != "s" || emailAmend != "b")
+                                {
+                                    Console.WriteLine("Wrong selection - please try again.");
+                                    goto comeBackHere;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("Wrong selection - please try again.");
+                            goto comeBackAgain;
+                            
                         }
                     }
                     while (true);

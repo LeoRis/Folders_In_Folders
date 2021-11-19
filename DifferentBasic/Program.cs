@@ -23,8 +23,6 @@ namespace DifferentBasic
             //BuildEmail newEmailForBojan = new BuildEmail();
 
             //BuildEmail.To = "test.different.basic@gmail.com";
-            //BuildEmail.CC = "leonid.ristanovski@gmail.com";
-            ////BuildEmail.BCC = "daniel@mltinvestment.com";
             //BuildEmail.Body = "Hello World!";
             //BuildEmail.Subject = "Test Email Via C#";
 
