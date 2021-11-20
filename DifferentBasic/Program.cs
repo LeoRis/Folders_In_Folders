@@ -77,6 +77,7 @@ namespace DifferentBasic
 
             HomeworkMenu.CreateMenu();
 
+
             Console.ReadKey();
 
         }

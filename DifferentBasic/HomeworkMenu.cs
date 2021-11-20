@@ -125,17 +125,30 @@ namespace DifferentBasic
                 }
                 else if(menu.InitialSelector == "2")
                 {
-                    Console.WriteLine("Please provide a path for your local file:");
-                    var tempPath = Console.ReadLine();
-                    menu.FtpPath = Path.GetDirectoryName(tempPath);
-                    Console.WriteLine("Please enter host:");
-                    menu.FtpHost = Console.ReadLine();
-                    Console.WriteLine("Please enter port:");
-                    menu.FtpPort = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("Please enter user Id:");
-                    menu.FtpUserId = Console.ReadLine();
-                    Console.WriteLine("Please enter password:");
-                    menu.FtpPassword = Console.ReadLine();
+                    //newPath:
+                    //    Console.WriteLine("Please provide a path for your local file:");
+                    //    var tempPath = String.Format("ftp://" + Console.ReadLine());
+                    //    menu.FtpPath = Path.GetDirectoryName(tempPath);
+                    //    Console.WriteLine("Please enter host:");
+                    //    menu.FtpHost = Console.ReadLine();
+                    //    Console.WriteLine("Please enter port:");
+                    //    menu.FtpPort = Convert.ToInt32(Console.ReadLine());
+                    //    Console.WriteLine("Please enter user Id:");
+                    //    menu.FtpUserId = Console.ReadLine();
+                    //    Console.WriteLine("Please enter password:");
+                    //    menu.FtpPassword = Console.ReadLine();
+
+                    //if (ftp.DoesFtpDirectoryExist(tempPath, menu.FtpUserId, menu.FtpPassword))
+                    //{
+                    //    Console.WriteLine("Folder already exists, please choose another path.");
+                    //    goto newPath;
+                    //}
+                    //else
+                    //{
+                    //Console.WriteLine("Folder doesn't exist.");
+                    Console.WriteLine(ftp.CreateFolder());
+                    ftp.UploadFile();
+                    //}
                 }
                 else if(menu.InitialSelector == "3")
                 {
