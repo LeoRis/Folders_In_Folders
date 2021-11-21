@@ -12,30 +12,6 @@ namespace DifferentBasic
     {
         static void Main()
         {
-            #region BuildEmail Demo
-            //FTP testFTP = new FTP();
-            //var host = testFTP.host = "82.214.114.2:21";
-            //testFTP.UserId = "bojan_academy";
-            //testFTP.Password = "qjeK7#88";
-
-            //testFTP.CreateFolder(host);
-
-            //BuildEmail newEmailForBojan = new BuildEmail();
-
-            //BuildEmail.To = "test.different.basic@gmail.com";
-            //BuildEmail.Body = "Hello World!";
-            //BuildEmail.Subject = "Test Email Via C#";
-
-            //if (BuildEmail.SendMailCustomBody())
-            //{
-            //    Console.WriteLine("I need to study a LOT!");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("You suck!");
-            //}
-            #endregion
-
             #region Folders Demo
             //var path = @"C:\Homework\basic\";
             //var longerPath = @"C:\Homework\";
@@ -76,7 +52,6 @@ namespace DifferentBasic
             #endregion
 
             HomeworkMenu.CreateMenu();
-
 
             Console.ReadKey();
 

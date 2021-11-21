@@ -7,6 +7,7 @@ namespace DifferentBasic
 {
     public class HomeworkMenu
     {
+        #region Properties
         public string InitialSelector { get; set; }
         public string EmailSubmenu { get; set; }
         public string EmailAddress { get; set; }
@@ -18,7 +19,7 @@ namespace DifferentBasic
         public int FtpPort { get; set; }
         public string FtpUserId { get; set; }
         public string FtpPassword { get; set; }
-
+        #endregion
         public static void CreateMenu()
         {
             HomeworkMenu menu = new HomeworkMenu();

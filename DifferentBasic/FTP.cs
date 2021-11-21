@@ -80,13 +80,14 @@ namespace DifferentBasic
         public void UploadFile()
         {
             string host = "ftp://82.214.114.2";
-            string path = "/Directory";
+            string path = "/Directory/";
+            string fileToUpload = "MyFile.txt";
             string UserId = "bojan_academy";
             string Password = "qjeK7#88";
 
             WebClient client = new WebClient();
             client.Credentials = new NetworkCredential(UserId, Password);
-            client.UploadFile(host + "/Directory/MyFile.txt", @"C:\tmp\MyFile.txt");
+            client.UploadFile(host + path + fileToUpload, @"C:\tmp\" + fileToUpload);
         }
     }
 }
