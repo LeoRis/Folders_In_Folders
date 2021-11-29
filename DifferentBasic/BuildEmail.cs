@@ -82,7 +82,8 @@ namespace DifferentBasic
 
         public static bool SendMailCustomBody()
         {
-            bool isok = false;
+            // Bool variable is false by default. No need of assignment.
+            bool isok;
             try
             {
                 bool useSsl = true;
