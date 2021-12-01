@@ -51,10 +51,7 @@ namespace DifferentBasic
             //EvenDocumentChangeName.Changer(longerPath);
             #endregion
 
-            //HomeworkMenu.CreateMenu();
-
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("The Matrix");
+            HomeworkMenu.CreateMenu();
 
             Console.ReadKey();
 

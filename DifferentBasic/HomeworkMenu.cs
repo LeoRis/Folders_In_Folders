@@ -24,7 +24,8 @@ namespace DifferentBasic
         {
             HomeworkMenu menu = new HomeworkMenu();
             FTP ftp = new FTP();
-
+            
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Hello and welcome to our console application.\n");
             
             do
@@ -37,6 +38,8 @@ namespace DifferentBasic
                     do
                     {
                         Console.WriteLine("Please enter valid email address:\nFor ex: test@test.test");
+
+                        // TODO cyrilic support
                         menu.EmailAddress = Console.ReadLine();
                         if (menu.EmailAddress.Contains("@"))
                         {
@@ -126,18 +129,18 @@ namespace DifferentBasic
                 }
                 else if(menu.InitialSelector == "2")
                 {
-                    //newPath:
-                    //    Console.WriteLine("Please provide a path for your local file:");
-                    //    var tempPath = String.Format("ftp://" + Console.ReadLine());
-                    //    menu.FtpPath = Path.GetDirectoryName(tempPath);
-                    //    Console.WriteLine("Please enter host:");
-                    //    menu.FtpHost = Console.ReadLine();
-                    //    Console.WriteLine("Please enter port:");
-                    //    menu.FtpPort = Convert.ToInt32(Console.ReadLine());
-                    //    Console.WriteLine("Please enter user Id:");
-                    //    menu.FtpUserId = Console.ReadLine();
-                    //    Console.WriteLine("Please enter password:");
-                    //    menu.FtpPassword = Console.ReadLine();
+                //newPath:
+                //    Console.WriteLine("Please provide a path for your local file:");
+                //    var tempPath = String.Format("ftp://" + Console.ReadLine());
+                //    menu.FtpPath = Path.GetDirectoryName(tempPath);
+                //    Console.WriteLine("Please enter host:");
+                //    menu.FtpHost = Console.ReadLine();
+                //    Console.WriteLine("Please enter port:");
+                //    menu.FtpPort = Convert.ToInt32(Console.ReadLine());
+                //    Console.WriteLine("Please enter user Id:");
+                //    menu.FtpUserId = Console.ReadLine();
+                //    Console.WriteLine("Please enter password:");
+                //    menu.FtpPassword = Console.ReadLine();
 
                     //if (ftp.DoesFtpDirectoryExist(tempPath, menu.FtpUserId, menu.FtpPassword))
                     //{
