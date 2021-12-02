@@ -103,9 +103,13 @@ namespace DifferentBasic
                 //Additional mails if requiered
                 //message.To.Add();                
                 if (!string.IsNullOrEmpty(CC))
+                {
                     message.CC.Add(CC);
+                }
                 if (!string.IsNullOrEmpty(BCC))
+                {
                     message.Bcc.Add(BCC);
+                }
                 message.Subject = Subject;
                 message.IsBodyHtml = true;
                 message.Body = Body;

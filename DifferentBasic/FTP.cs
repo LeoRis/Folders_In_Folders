@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace DifferentBasic
 {
     public class FTP
-    {
+    {    
         //string host = "82.214.114.2:21";
         //public string UserId = "bojan_academy";
         //public string Password = "qjeK7#88";
@@ -26,6 +26,7 @@ namespace DifferentBasic
             string UserId = "bojan_academy";
             string Password = "qjeK7#88";   
             string path = "/Directory";
+
             bool IsCreated = true;
             try
             {
@@ -40,6 +41,7 @@ namespace DifferentBasic
             catch (Exception ex)
             {
                 IsCreated = false;
+                Console.WriteLine("The directory already exists!");
             }
             finally
             {

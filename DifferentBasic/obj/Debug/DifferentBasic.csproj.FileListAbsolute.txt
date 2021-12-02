@@ -10,6 +10,5 @@ C:\Users\Leonid.Ristanovski\source\repos\DifferentBasic\DifferentBasic\bin\Debug
 C:\Users\Leonid.Ristanovski\source\repos\DifferentBasic\DifferentBasic\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Leonid.Ristanovski\source\repos\DifferentBasic\DifferentBasic\obj\Debug\DifferentBasic.Migrations.InitialMigration.resources
 C:\Users\Leonid.Ristanovski\source\repos\DifferentBasic\DifferentBasic\obj\Debug\DifferentBasic.csproj.GenerateResource.cache
-C:\Users\Leonid.Ristanovski\source\repos\DifferentBasic\DifferentBasic\obj\Debug\DifferentBasic.csproj.AssemblyReference.cache
 C:\Users\Leonid.Ristanovski\source\repos\DifferentBasic\DifferentBasic\bin\Debug\FluentFTP.dll
 C:\Users\Leonid.Ristanovski\source\repos\DifferentBasic\DifferentBasic\bin\Debug\FluentFTP.xml
