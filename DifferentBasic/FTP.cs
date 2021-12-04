@@ -43,10 +43,7 @@ namespace DifferentBasic
                 IsCreated = false;
                 Console.WriteLine("The directory already exists!");
             }
-            finally
-            {
-                // This code block MUST happen.
-            }
+
             return IsCreated;
         }
 
