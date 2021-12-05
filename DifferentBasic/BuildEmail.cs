@@ -157,6 +157,7 @@ namespace DifferentBasic
             }
             catch (Exception e)
             {
+                // This is a test example.
                 throw new ArgumentException(e.Message);
             }
             return isok;
