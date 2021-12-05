@@ -155,10 +155,9 @@ namespace DifferentBasic
 
                 isok = true;
             }
-            catch
+            catch (Exception e)
             {
-
-
+                throw new ArgumentException(e.Message);
             }
             return isok;
         }
