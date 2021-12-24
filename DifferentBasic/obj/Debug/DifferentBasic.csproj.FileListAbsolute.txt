@@ -12,3 +12,4 @@ C:\Users\Leonid.Ristanovski\source\repos\DifferentBasic\DifferentBasic\obj\Debug
 C:\Users\Leonid.Ristanovski\source\repos\DifferentBasic\DifferentBasic\obj\Debug\DifferentBasic.csproj.GenerateResource.cache
 C:\Users\Leonid.Ristanovski\source\repos\DifferentBasic\DifferentBasic\bin\Debug\FluentFTP.dll
 C:\Users\Leonid.Ristanovski\source\repos\DifferentBasic\DifferentBasic\bin\Debug\FluentFTP.xml
+C:\Users\Leonid.Ristanovski\source\repos\DifferentBasic\DifferentBasic\obj\Debug\DifferentBasic.csproj.AssemblyReference.cache
