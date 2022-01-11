@@ -28,7 +28,7 @@ namespace DifferentBasic
 
         public static bool CheckIfPathIsFile(string filePath)
         {
-            bool result = false;
+            bool result;
             FileAttributes attr = File.GetAttributes(filePath);
 
             //detect whether its a directory or file
@@ -90,7 +90,7 @@ namespace DifferentBasic
             }
             else
             {
-                // If value is invalid, return -1.
+                // If value is invalid, return -1. -This value is mutualy agreed between the teams.
                 return -1;
             }
         }
@@ -115,6 +115,5 @@ namespace DifferentBasic
 
 
         #endregion
-
     }
 }
