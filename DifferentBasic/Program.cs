@@ -13,12 +13,12 @@ namespace DifferentBasic
         static void Main()
         {
             #region Folders Demo
-            var path = @"C:\Homework\basic\";
-            var longerPath = @"C:\Homework\";
-            var filePath = @"C:\Homework\basic1\1\1.pdf";
-            var sourceFolder = @"C:\Homework\basic1";
-            var destinationFolder = @"C:\tmp\";
-            int location = 1;
+            //var path = @"C:\Homework\basic\";
+            //var longerPath = @"C:\Homework\";
+            //var filePath = @"C:\Homework\basic1\1\1.pdf";
+            //var sourceFolder = @"C:\Homework\basic1";
+            //var destinationFolder = @"C:\tmp\";
+            //int location = 1;
 
             //TODO while ()
 
@@ -40,21 +40,21 @@ namespace DifferentBasic
             //    Console.WriteLine("Please enter folder path.");
             //}
 
-            Folders.CreateFolders(path);
+            //Folders.CreateFolders(path);
 
-            Console.WriteLine("Please insert the type of extension that you wish to delete: ");
+            //Console.WriteLine("Please insert the type of extension that you wish to delete: ");
 
-            var extension = Console.ReadLine();
+            //var extension = Console.ReadLine();
 
-            Helper.RemoveFilesWithExtension(filePath, extension);
+            //Helper.RemoveFilesWithExtension(filePath, extension);
 
-            EvenDocumentChangeName.Changer(longerPath);
+            //EvenDocumentChangeName.Changer(longerPath);
 
             #endregion
 
-            //HomeworkMenu.CreateMenu();
+            HomeworkMenu.CreateMenu();
 
-            //Console.ReadKey();
+            Console.ReadKey();
 
         }
     }

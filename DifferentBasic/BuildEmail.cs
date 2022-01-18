@@ -126,25 +126,27 @@ namespace DifferentBasic
             {
                 throw new ArgumentException(ex.Message);
             }
+
             return isok;
         }
 
         public static bool SendMailCustomBodyWithAttachment()
         {
-            bool isok = false;
+            // Bool variable is false by default. No need of assignment.
+            bool isok;
             try
             {
                 MailMessage message = new MailMessage();
                 SmtpClient smtpClient = new SmtpClient();
-
                 MailAddress fromAddress = new MailAddress(ConfigurationManager.AppSettings["different.com.mk.SmtpInfoUserName"]);
+
                 message.From = fromAddress;
                 message.To.Add(To);
-
                 message.Subject = Subject;
                 message.IsBodyHtml = true;
                 message.Body = Body;
                 message.Priority = MailPriority.High;
+
                 smtpClient.Host = ConfigurationManager.AppSettings["different.com.mk.DefaultSmtp"];   // We use gmail as our smtp client
                 smtpClient.Port = Convert.ToInt32(ConfigurationManager.AppSettings["different.com.mk.DefaultSmtpPort"]);
                 smtpClient.EnableSsl = false;
